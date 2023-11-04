@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskTable {
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    height: 80vh;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.tasks, .runningTasks, .completeTasks {
+    width: 30vw;
+    text-align: center;
+}
+
+#centeredTask {
+    width: 28vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#task {
+    width: 80%;
+    height: auto;
+    max-height: 150px;
+}
+
+h2 {
+    height: 8vh;
+    text-align: center;
+}
+
+#icons {
+    max-height: 200px;
+}
+
+table button {
+    border: 0;
+    background-color: #FFF;
+}
+
+.scrollArea {
+    height: 67vh;
+    overflow: auto;
+}
+
+
+.inputArea {
+    margin-top: 3vh;
+    bottom: 0;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#lightOrDarkMode {
+    width: 32px;
+    position: fixed;
+    margin-left: 0.1rem;
+    bottom: 0;
+    transition: 0.5s ease, color 0.5s ease;
+}
+
+.swal2-popup button {
+    font-size: 22px;
+    margin-top: 10vh;
+}
+
+
+@media (max-width: 950px) {
+    #lightOrDarkMode {
+        top: 0;
+    }
+
+    .alert {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5vh;
+    }
+
+    .taskTable {
+        width: 90vw;
+        justify-content: space-evenly;
+    }
+
+    .tasks, .runningTasks, .completeTasks {
+        width: 25vw;
+    }
+
+    .scrollArea {
+        height: 40vh;
+    }
+
+    i {
+        display: block;
+    }
+
+    #task {
+        font-size: 12px;
+    }
+
+    .inputArea::placeholder{
+        font-size: 10px;
+    }
+
+    .types {
+        font-size: 12px;
+    }
+
+    .swal2-popup {
+        margin-right: 2.5vh;
+        font-size: 12px;
+    }
+    
+    .swal2-popup button {
+        display: inline-block;
+        width: 150px;
+        height: 70px;
+        font-size: 22px;
+    }
+
+    .modal {
+        margin-top: -20vh;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .alert {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4vh;
+    }
+
+    .taskTable {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        width: 85%;
+    }
+
+    #task {
+        font-size: 14px;
+    }
+
+    .scrollArea {
+        height: 30vh;
+    }
+
+    .tasks, .runningTasks, .completeTasks {
+        width: 80vw;
+        height: 50vh;
+    }
+
+    .runningTasks, .completeTasks {
+        margin-top: -5vh;
+    }
+
+    .swal2-popup {
+        height: 310px;
+        width: 360px;
+        margin-left: 4vh;
+        font-size: 12px;
+    }
+    
+    .swal2-popup button {
+        display: inline-block;
+        width: 150px;
+        height: 70px;
+        font-size: 22px;
+    }
+
+    .modal {
+        margin-top: -20vh;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .alert {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 6vh;
+    }
+
+    .taskTable {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 100%;
+        width: 85%;
+
+    }
+
+
+    .tasks, .runningTasks, .completeTasks {
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .swal2-popup {
+        height: 360px;
+        width: 360px;
+        margin-left: 4vh;
+        font-size: 12px;
+    }
+    
+    .swal2-popup button {
+        margin-top: 6vh;
+        display: inline-block;
+        width: 150px;
+        height: 70px;
+        font-size: 22px;
+    }
+
+    .modal {
+        margin-top: -20vh;
+    }
+}
+
